@@ -21,5 +21,6 @@
     "react/prop-types": 0,
     "object-curly-spacing": "off",
     "arrow-parens": 0,
+    "jsx-a11y/anchor-is-valid": "off",
     }
 }

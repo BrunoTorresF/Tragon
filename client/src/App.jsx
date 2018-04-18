@@ -30,7 +30,7 @@ export default class App extends Component {
       if (user) {
         this.setState({
           isAuthenticated: true,
-          user: user,
+          user,
         });
       } else {
         this.setState({

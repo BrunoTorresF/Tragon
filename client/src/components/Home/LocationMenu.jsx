@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from 'material-ui/Button';
-import Menu, { MenuItem } from 'material-ui/Menu';
+import Menu, {MenuItem} from 'material-ui/Menu';
 import Fade from 'material-ui/transitions/Fade';
 
 class LocationMenu extends React.Component {
@@ -20,9 +20,9 @@ class LocationMenu extends React.Component {
     const { anchorEl } = this.state;
 
     return (
-      <div className='Menu'>
+      <div className="Menu">
         <Button
-          style={{ backgroundColor:'white', }}
+          style={{ backgroundColor: 'white' }}
           aria-owns={anchorEl ? 'fade-menu' : null}
           aria-haspopup="true"
           onClick={this.handleClick}
