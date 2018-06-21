@@ -1,53 +1,49 @@
-import React, {Component} from 'react';
-
-import AddUser from '../components/Login/AddUser.jsx'
+import React, { Component } from 'react';
+import AddUser from '../components/Login/AddUser.jsx';
 
 export default class Mongo extends Component {
-  constructor(){
-    super()
+  constructor() {
+    super();
     this.state = {
-      userName: ""
-    }
+      userName: '',
+    };
   }
 
-  updateUser = (event) => {
+  updateUser = event => {
     this.setState({
-      userName: event.target.value
-    })
-  }
+      userName: event.target.value,
+    });
+  };
 
   submitUser = () => {
-    axios.post('/ProfilePage', {
-      Name: this.state.userName
-    })
-    .then(res => {
-      console.log('OK')
-    })
-    .catch(err => {
-      console.error(err);
-    })
+    axios
+      .post('/ProfilePage', {
+        Name: this.state.userName,
+      })
+      .then(res => {
+        console.log('OK');
+      })
+      .catch(err => {
+        console.error(err);
+      });
 
     this.setState({
-      userName: ''
-    })
-  }
+      userName: '',
+    });
+  };
 
   render() {
     return (
       <div>
-        Username: <input
+        Username:{' '}
+        <input
           onChange={this.updateUser}
           placeholder="Enter username"
-          value={this.state.userName}>
-        </input>
-          <br/>
-        <button onClick={this.submitUser}>
-          Add User
-        </button>
-
+          value={this.state.userName}
+        />
+        <br />
+        <button onClick={this.submitUser}>Add User</button>
       </div>
-
-
-    )
+    );
   }
 }

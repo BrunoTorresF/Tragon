@@ -10,7 +10,7 @@
     "sourceType": "module",
     "ecmaVersion": 9
   },
-  "extends": [ "eslint:recommended", "plugin:react/recommended", "airbnb"],
+  "extends": [ "eslint:recommended", "plugin:react/recommended"],
   "plugins": [ "react" ],
   "rules": {
     "no-console": "off",
