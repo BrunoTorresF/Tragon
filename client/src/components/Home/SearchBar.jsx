@@ -1,23 +1,23 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Button from 'material-ui/Button';
 
 export default class SearchBar extends Component {
   state = {
     search: '',
-  }
+  };
 
-  updateSearch = (event) => {
+  updateSearch = event => {
     this.setState({
       search: event.target.value,
     });
-  }
+  };
 
   newSearch = () => {
     this.props.submitSearch(this.state.search);
     this.setState({
       search: '',
     });
-  }
+  };
 
   render() {
     return (

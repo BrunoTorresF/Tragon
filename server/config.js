@@ -1,16 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const route = require('./routes');
-const mongoose = require('mongoose');
 const compression = require('compression');
-const mongo = require('../database/config');
 
 const app = express();
 
 // middleware
 app.use(compression());
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(`${__dirname}/../client/dist`));
 
 // HTTP Requests go here
